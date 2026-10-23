@@ -1,0 +1,45 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "REVIEW",
+      "missingSigners": "#2",
+      "remainingDays": "#9"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "completedSigners": "3"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "deadline": "2026-10-22"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "voided": "YES"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "completedSigners": "4"
+    },
+    "expected": {},
+    "error": true
+  }
+]
